@@ -29,11 +29,10 @@ python ip_lookup.py
 #### 2. Choose Input Method
 
 - **Option 1: Manual Entry**
-  - You will be prompted to enter IP addresses separated by commas (`,`)
-  - Example: `8.8.8.8, 1.1.1.1`
+  - You will be prompted to enter IP addresses separated by commas (`,`). Example: `8.8.8.8, 1.1.1.1`
 
 - **Option 2: File Input**
-  - Provide the full path to a file containing one IP address per line.
+  - Provide the full path to a file containing one IP address per line
 
 ## Terminal Table Includes
 
@@ -50,6 +49,24 @@ A table displaying the following fields for each IP:
 - ASN (Autonomous System Number)  
 - Count (number of times the IP appeared)
 
+```
+📌 IP Lookup Tool
+1. Enter IP(s) manually
+2. Load IPs from file
+Select an option (1/2): 1
+Enter IPs (comma-separated): 8.8.8.8,1.1.1.1
+
+📊 IP Information:
++-------------+-------------------+---------+------------------+---------------+--------------+----------+-----------+------------------------------+-------+
+| IP Address  |     Hostname      | Country |     Region       |     City      | Postal Code  | Latitude | Longitude |             ASN              | Count |
++-------------+-------------------+---------+------------------+---------------+--------------+----------+-----------+------------------------------+-------+
+| 8.8.8.8     | dns.google        | US      | California       | Mountain View | 94043        | 37.386   | -122.084  | AS15169 Google LLC           | 1     |
+| 1.1.1.1     | one.one.one.one   | AU      | New South Wales  | Sydney        | 2000         | -33.8591 | 151.2002  | AS13335 Cloudflare, Inc.     | 1     |
++-------------+-------------------+---------+------------------+---------------+--------------+----------+-----------+------------------------------+-------+
+
+💾 Saved JSON output to: results/report_4872.json
+```
+
 ## 🧾 JSON File
 
 A JSON report is saved under the `results/` directory. The filename is randomly generated, e.g., `report_4872.json`.
@@ -63,26 +80,6 @@ IPINFO_TOKEN = 'your_token_here'
 ```
 
 This may increase your request limits and provide more detailed data.
-
-## Demo
-
-```
-📌 IP Lookup Tool
-1. Enter IP(s) manually
-2. Load IPs from file
-Select an option (1/2): 1
-Enter IPs (comma-separated): 8.8.8.8,1.1.1.1
-
-📊 IP Information:
-+-------------+----------+---------+--------+--------+-------------+----------+-----------+------------------------------+-------+
-| IP Address  | Hostname | Country | Region |  City  | Postal Code | Latitude | Longitude |             ASN              | Count |
-+-------------+----------+---------+--------+--------+-------------+----------+-----------+------------------------------+-------+
-|  8.8.8.8    | dns.google |   US    |  California | Mountain View |   94043   |  37.386   |  -122.084  | AS15169 Google LLC        |   1   |
-|  1.1.1.1    | one.one.one.one |   AU    |  New South Wales | Sydney |   2000    | -33.8591  | 151.2002  | AS13335 Cloudflare, Inc.  |   1   |
-+-------------+----------+---------+--------+--------+-------------+----------+-----------+------------------------------+-------+
-
-💾 Saved JSON output to: results/report_4872.json
-```
 
 ## Notes
 
